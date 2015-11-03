@@ -52,4 +52,9 @@ public class Item
 	{
 		this.quality = this.quality - 1;
 	}
+
+	public void incrementQuality()
+	{
+		this.quality = this.quality + 1;
+	}
 }

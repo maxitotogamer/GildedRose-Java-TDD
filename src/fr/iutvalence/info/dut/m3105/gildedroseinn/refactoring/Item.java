@@ -43,13 +43,13 @@ public class Item
 		this.quality = quality;
 	}
 	
-	public void decrementSellIn(int decrementNumber)
+	public void decrementSellIn()
 	{
-		this.sellIn = this.sellIn - decrementNumber;
+		this.sellIn = this.sellIn - 1;
 	}
 
-	public void decrementQuality(int decrementNumber)
+	public void decrementQuality()
 	{
-		this.quality = this.quality - decrementNumber;
+		this.quality = this.quality - 1;
 	}
 }

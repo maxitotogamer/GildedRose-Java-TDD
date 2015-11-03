@@ -27,15 +27,13 @@ public class GildedRose
 	{
 		if (item.getSellIn() < 0)
 		{
-			item.decrementSellIn(1);
-			item.decrementQuality(2);
-		} else
-		{
-			item.decrementQuality(1);
-			item.decrementSellIn(1);
+			item.decrementQuality();
 		}
-		
+		item.decrementQuality();
+		item.decrementSellIn();
 	}
+
+
 
 
 

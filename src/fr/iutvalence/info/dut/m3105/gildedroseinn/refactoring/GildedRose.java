@@ -29,8 +29,14 @@ public class GildedRose
 		{
 			item.decrementQuality();
 		}
+		
 		item.decrementQuality();
 		item.decrementSellIn();
+		
+		if(item.getQuality() < 0)
+		{
+			item.setQuality(0);
+		}
 	}
 
 

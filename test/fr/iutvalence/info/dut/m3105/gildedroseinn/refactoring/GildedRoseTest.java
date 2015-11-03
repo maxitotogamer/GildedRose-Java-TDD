@@ -26,4 +26,13 @@ public class GildedRoseTest
 		Assert.assertEquals(item.getQuality(), 20-2);
 		Assert.assertEquals(item.getSellIn(), -1-1);
 	}
+	
+	@Test
+	public void qualityIsAlwaysPositive()
+	{
+		Item item = new Item("Conjured Mana Cake", -1, 1);
+		GildedRose.updateItem(item);
+		Assert.assertEquals(item.getQuality(), 0);
+		Assert.assertEquals(item.getSellIn(), -1-1);
+	}
 }

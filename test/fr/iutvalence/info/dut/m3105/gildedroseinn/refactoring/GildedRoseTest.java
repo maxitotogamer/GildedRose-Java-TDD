@@ -14,10 +14,16 @@ public class GildedRoseTest
 	{
 		Item item = new Item("+5 Dexterity Vest", 10, 20);
 		GildedRose.updateItem(item);
-		Assert.assertEquals(item.getQuality(), 19);
-		Assert.assertEquals(item.getSellIn(), 9);
+		Assert.assertEquals(item.getQuality(), 20-1);
+		Assert.assertEquals(item.getSellIn(), 10-1);
 	}
 	
-
-
+	@Test
+	public void sellInNotPositiveDecrementSellInAndQualityBy2()
+	{
+		Item item = new Item("Sulfuras, Hand of Ragnaros", -1, 20);
+		GildedRose.updateItem(item);
+		Assert.assertEquals(item.getQuality(), 20-2);
+		Assert.assertEquals(item.getSellIn(), -1-1);
+	}
 }
